@@ -13,8 +13,8 @@ const Header = () => {
       <div className="header-top">
         <div className="container">
           <div className="contact-info">
-            <span>📞 +998 90 123 45 67</span>
-            <span>📧 info@bistrobliss.uz</span>
+            <span>📞 +998 94 052 72 80</span>
+            <span>📧 azizbekqoshoqov0206@bistrobliss.uz</span>
           </div>
           <div className="social-links">
             <a href="#" className="social-link">
@@ -72,7 +72,7 @@ const Header = () => {
           </nav>
 
           <div className="header-actions">
-            <button className="btn-primary">Bron qilish</button>
+            <button className="btn-primary">Table</button>
           </div>
 
           <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>

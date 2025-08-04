@@ -1,9 +1,13 @@
-* {
+/* Reset */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* CSS Variables */
 :root {
   --primary-color: #ff6b35;
   --secondary-color: #f7931e;
@@ -18,19 +22,37 @@
   --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
   --border-radius: 15px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+/* Base */
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-family);
   line-height: 1.6;
   color: var(--dark-color);
+  background-color: var(--white);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+a:hover,
+a:focus {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  outline: none;
 }
 
 /* Buttons */
@@ -47,11 +69,14 @@ body {
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  user-select: none;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
   transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
+  outline: none;
 }
 
 .btn-primary.large {
@@ -80,12 +105,15 @@ body {
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  user-select: none;
 }
 
-.btn-outline:hover {
+.btn-outline:hover,
+.btn-outline:focus {
   background: var(--primary-color);
   color: var(--white);
   transform: translateY(-3px);
+  outline: none;
 }
 
 .btn-outline.large {
@@ -104,6 +132,7 @@ body {
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--dark-color);
+  letter-spacing: 0.03em;
 }
 
 .section-description {
@@ -111,6 +140,7 @@ body {
   color: var(--gray);
   max-width: 600px;
   margin: 0 auto;
+  line-height: 1.5;
 }
 
 .section-footer {
@@ -131,13 +161,18 @@ body {
 }
 
 @keyframes float {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px);
   }
   50% {
     transform: translateY(-20px);
   }
+}
+
+/* Accessibility helper: focus outline */
+:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
 }
 
 /* Responsive */

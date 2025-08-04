@@ -6,6 +6,8 @@ import Menu from "./components/Menu"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import "./styles/global.css"
+import AdminPanel from "./components/AdminPanel"
+import "./styles/admin-panel.css"
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/admin" element={<AdminPanel />} />
           </Routes>
         </main>
 
@@ -29,3 +32,4 @@ function App() {
 }
 
 export default App
+
