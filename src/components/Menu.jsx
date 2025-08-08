@@ -15,6 +15,7 @@ const Menu = () => {
     { id: "drinks", name: "Ichimliklar" },
     { id: "desserts", name: "Shirinliklar" },
   ]
+  
   const [menu,setMenu] = useState([])
   const [loading,setLoading] = useState(true)
   const [error,setError] = useState(null)

@@ -1,0 +1,71 @@
+/* components/admin-panel.module.css */
+.container {
+  display: grid;
+  min-height: 100vh;
+  width: 100%;
+  grid-template-columns: 1fr; /* Default for mobile */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .container {
+    grid-template-columns: 220px 1fr; /* md:grid-cols-[220px_1fr] */
+  }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .container {
+    grid-template-columns: 280px 1fr; /* lg:grid-cols-[280px_1fr] */
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentArea {
+  flex: 1; /* flex-1 */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* gap-4 */
+  padding: 16px; /* p-4 */
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .contentArea {
+    gap: 24px; /* lg:gap-6 */
+    padding: 24px; /* lg:p-6 */
+  }
+}
+
+.dashboardGrid {
+  display: grid;
+  gap: 16px; /* gap-4 */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .dashboardGrid {
+    gap: 32px; /* md:gap-8 */
+  }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .dashboardGrid {
+    grid-template-columns: repeat(2, 1fr); /* lg:grid-cols-2 */
+  }
+}
+
+@media (min-width: 1280px) { /* xl breakpoint */
+  .dashboardGrid {
+    grid-template-columns: repeat(3, 1fr); /* xl:grid-cols-3 */
+  }
+}
+
+.settingsPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 24px;
+  color: #6c757d; /* text-muted-foreground */
+}

@@ -1,0 +1,61 @@
+/* components/dashboard-overview.module.css */
+.gridContainer {
+  display: grid;
+  gap: 16px; /* gap-4 */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+    gap: 32px; /* md:gap-8 */
+  }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr); /* lg:grid-cols-4 */
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px; /* p-4 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px; /* pb-2 */
+}
+
+.cardTitle {
+  font-size: 14px; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #495057;
+}
+
+.cardIcon {
+  height: 16px; /* h-4 */
+  width: 16px; /* w-4 */
+  color: #6c757d; /* text-muted-foreground */
+}
+
+.cardContent {
+  /* No specific styles needed here, children will be styled */
+}
+
+.cardValue {
+  font-size: 24px; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  color: #343a40;
+}
+
+.cardDescription {
+  font-size: 12px; /* text-xs */
+  color: #6c757d; /* text-muted-foreground */
+}
